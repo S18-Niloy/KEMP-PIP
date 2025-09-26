@@ -6,3 +6,6 @@ Dataset: The dataset used in this study consists of peptide sequences annotated 
 ![Alt text](Pic/final_kpip.png)
 
 [Web Interface](https://nilsparrow1920-kemp-pip.hf.space/)
+
+
+N.B. The paper based on that project is in review in a journal
