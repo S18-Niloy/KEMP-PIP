@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peptide-pipeline"
+version = "0.1.0"
+description = "Feature-block ablation and coefficient-pruned ensemble classification of peptide sequences (k-mer, physchem, modlAMP, ESM-2)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "scipy>=1.10",
+    "torch>=2.0",
+    "transformers>=4.30",
+    "modlamp>=4.3",
+    "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+xgboost = ["xgboost>=1.7"]
+dev = ["pytest>=7.0", "black>=23.0", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/peptide-pipeline"
+Issues = "https://github.com/yourusername/peptide-pipeline/issues"
+
+[tool.setuptools.packages.find]
+include = ["peptide_pipeline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

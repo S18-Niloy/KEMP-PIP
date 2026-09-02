@@ -1,9 +1,22 @@
-streamlit
-pandas
-numpy
-scikit-learn
-torch
-transformers
-matplotlib
-modlamp
-joblib
+# Core
+numpy>=1.24
+pandas>=1.5
+scikit-learn>=1.2
+scipy>=1.10
+
+# Deep learning / protein language model embeddings
+torch>=2.0
+transformers>=4.30
+
+# Physicochemical / global peptide descriptors
+modlamp>=4.3
+
+# Gradient boosting (optional but used by the multi-model ablation; the
+# pipeline degrades gracefully -- skipping XGBoost -- if this is absent)
+xgboost>=1.7
+
+# Plotting
+matplotlib>=3.6
+
+# Testing (dev only; not required to run the pipeline)
+pytest>=7.0

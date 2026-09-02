@@ -1,3 +1,35 @@
+Metadata-Version: 2.4
+Name: peptide-pipeline
+Version: 0.1.0
+Summary: Feature-block ablation and coefficient-pruned ensemble classification of peptide sequences (k-mer, physchem, modlAMP, ESM-2).
+Author-email: Your Name <you@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/peptide-pipeline
+Project-URL: Issues, https://github.com/yourusername/peptide-pipeline/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=1.5
+Requires-Dist: scikit-learn>=1.2
+Requires-Dist: scipy>=1.10
+Requires-Dist: torch>=2.0
+Requires-Dist: transformers>=4.30
+Requires-Dist: modlamp>=4.3
+Requires-Dist: matplotlib>=3.6
+Provides-Extra: xgboost
+Requires-Dist: xgboost>=1.7; extra == "xgboost"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"
+Dynamic: license-file
+
 # peptide-pipeline
 
 A feature-block ablation and coefficient-pruned ensemble pipeline for binary
