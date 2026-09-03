@@ -83,24 +83,7 @@ tables), the 15-combo x 4-model ablation, and training-time benchmarking.
 All CSVs and figures are written under `results/`. Test labels are optional
 (omit `--test-labels` for predict-only mode).
 
-For a first, fully-offline smoke test that doesn't require your real
-dataset, generate a small synthetic dataset first:
 
-```bash
-python examples/make_synthetic_dataset.py --out-dir data/synthetic --n-train 200 --n-test 60
-python examples/run_pipeline.py \
-    --train-sequences data/synthetic/X_train.csv \
-    --train-labels    data/synthetic/label_train.csv \
-    --test-sequences  data/synthetic/X_test.csv \
-    --test-labels     data/synthetic/label_test.csv \
-    --out-dir results/synthetic_smoke_test \
-    --skip-multi-model-ablation --skip-training-time
-```
-
-(`--skip-multi-model-ablation`/`--skip-training-time` shorten the run; drop
-them for the full pipeline. The synthetic sequences are random, not real
-peptides, so treat the resulting metrics as a pipeline sanity check, not a
-scientific result.)
 
 Run `python examples/run_pipeline.py --help` for all options.
 
@@ -152,7 +135,13 @@ above serves as the integration-level smoke test for the full pipeline.
 ## Repository layout
 
 ```
-peptide_pipeline/
+KEMP-PIP/
+├── data/
+│   └── real/
+│       ├── X_train.csv
+│       ├── label_train.csv
+│       ├── X_test.csv
+│       └── label_test.csv
 ├── peptide_pipeline/
 │   ├── data_loading.py       # CSV -> DataFrame loading
 │   ├── pipeline.py           # feature-extraction orchestration + class weights
